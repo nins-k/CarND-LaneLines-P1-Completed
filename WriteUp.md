@@ -54,9 +54,9 @@ The **weighted_img** method is used overlay the lane lines over the original ima
 overlay_img = weighted_img(line_img, img)
 ```
 The input image looks like this.
-![Input Image](.\markdown_images\initial.jpg)
+![Input Image](markdown_images/initial.jpg)
 After processing it through this pipeline (without modifying the **draw_lines** method, it would appear as below.
-![Lanes Detected](.\markdown_images\lanes_detected.jpg)
+![Lanes Detected](markdown_images/lanes_detected.jpg)
 
 ### 3. Extrapolation of Lane Lines
 I have made a few changes to the **draw_lines** method to integrate the line extrapolation. My initial approach was to segregate the lines based on their *x co-ordinate* but that did not yield the desired result.
@@ -112,7 +112,7 @@ x_left_top = int(round((y_top - left_lane_const[1])/left_lane_const[0]))
 x_left_bottom = int(round((y_bottom - left_lane_const[1])/left_lane_const[0]))
 ```
 With this modified version of **draw_lines**, the processed image now appears as shown below.
-![Solid Lane Lines][.\markdown_images\solid_lanes.jpg]
+![Solid Lane Lines][markdown_images/solid_lanes.jpg]
 ### 4. Shortcomings
 This approach works well only with severe restrictions on the input supplied to the pipeline.
 These are some of the conditions where the above outlined approach would not work as required:
